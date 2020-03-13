@@ -1,0 +1,13 @@
+.fruit {
+    background-color: white;
+    margin: 10px;
+    padding: 4px;
+    text-align: center;
+    width: 4.5em;
+    height: 2.2em;
+    float: left;
+    transition: all 5s ease-out;
+  }
+.apple {background-color: red;}
+.pear {background-color: green; color: white}
+.orange {background-color: orange;}
