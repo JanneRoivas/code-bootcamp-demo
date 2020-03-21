@@ -1,0 +1,12 @@
+.Kakut {
+    overflow: auto;
+    transition: all 2s ease-out;
+    float: left;
+    padding: 2px 2px;
+   /* border: 2px solid black;
+*/  }
+.Kakku {
+  overflow: auto;
+  transition: all 2s ease-out;
+  float: left;
+}

@@ -26,19 +26,11 @@ const getTortut = (req,res) => {
     .then((ProductListFromDb) =>res.send(ProductListFromDb))
     .catch(error => res.status(500).send(error))
     }
-const getProduct = (req,res) => {
-    const id = req.params.id;
-    db.one("SELECT * FROM bakedGoods WHERE id=$1", [id])
-    .then((ProductListFromDb) =>res.send(ProductListFromDb))
-    .catch(error => res.status(500).send(error))
-    }
 
 
-    
     module.exports = {
         getKakut,
         getLeivokset,
         getPullat,
         getTortut,
-        getProduct
     }

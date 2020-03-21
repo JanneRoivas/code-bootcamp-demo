@@ -3,11 +3,12 @@ import "./Categories.css";
 import PropTypes from "prop-types"
 
 
-export default function Category(props) {
-   return <div className={`categories ${props}`}>
-      {props}
-    </div>
+export default function Categories(props) {
+   return <div className={`categories ${props.tyyppi}`}>{props.tyyppi}
+   </div>
 }
+
+
 //      {props.onDelete && <button onClick={event => props.onDelete()}>X</button>}
 /*
 Product.propTypes = {

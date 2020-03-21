@@ -8,7 +8,7 @@ import Leivokset from './Components/Leivokset';
 import Pullat from './Components/Pullat';
 import Tortut from './Components/Tortut';*/
 
-import './App.css';
+//import './App.css';
 
 function App() {
   return (
