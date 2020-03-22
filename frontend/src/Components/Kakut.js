@@ -35,29 +35,16 @@ export default function Kakut(props) {
     )
     const [product, setProduct] = useState([]);
     
-    let id = 1
-    
     const clickedProduct = (id) => {
         async function fetchData(){
-            const res = await fetch('/api/kakut/${id}')
+            const res = await fetch(`/api/kakut/${id}`)
             res
                 .json()
-                .then(data => setKakut(data))
+                .then(data => setProduct(data))
                 .catch(err => console.log("error"))
         }
         fetchData()
     }
-
-    useEffect(()  => {
-        async function fetchData(){
-        const res = await fetch(`/api/kakut/${id}`)
-        res
-            .json()
-            .then(data => setProduct(data))
-            .catch(err => console.log("error"))
-    }
-    fetchData()
-    },[])
 
     const kakkuElements = product.kuvaus
     
