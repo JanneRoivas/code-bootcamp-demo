@@ -1,9 +1,10 @@
 .nav-bar {
-    background-color: darkblue;
+    background-color: lightgreen;
     overflow: auto;
 }
 .nav-bar a {
-    color: white;
+    color: brown;
+    font: italic bold 20px/30px georgia;
 }
   
 .nav-bar ul {

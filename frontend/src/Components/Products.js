@@ -10,9 +10,11 @@ function clickedProduct(id){
 
 
 export default function Products(props) {
+
     return (
       <div className={`products ${props.tyyppi}`}>
-        {<button className="ProductButton" onClick={(id) => props.clickedProduct(props.id)}>{props.nimi}</button>}
+        {<button id="props.id" className="ProductButton" onClick={() => props.clickedProduct(props.id)}>{props.nimi}</button>}
       </div>
     )
   }
+

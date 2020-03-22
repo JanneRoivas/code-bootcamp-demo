@@ -9,7 +9,6 @@ export default function Kakut(props) {
 
     const [kakut, setKakut] = useState([]);
    
-
     useEffect(() => {
         async function fetchData(){
             const res = await fetch('/api/kakut')
@@ -35,6 +34,22 @@ export default function Kakut(props) {
     )
     const [product, setProduct] = useState([]);
     
+    // Tehdään sivulle mentäessä ensimmäiset tuotteen tiedot. HUOM! aiheuttaa 2kpl erroria mutta toimii. 
+    let firstID = kakut.map(kakutData => kakutData.id)
+    firstID = firstID[0]
+    
+    if (product.kuvaus === undefined) {
+        async function fetchData(){
+            const res = await fetch(`/api/kakut/${firstID}`)
+            res
+                .json()
+                .then(data => setProduct(data))
+                .catch(err => console.log("error"))
+        }
+        fetchData()
+    }   
+    
+    // Haetaan valitun tuotteen tiedot
     const clickedProduct = (id) => {
         async function fetchData(){
             const res = await fetch(`/api/kakut/${id}`)
@@ -51,7 +66,7 @@ export default function Kakut(props) {
     return (
         <React.Fragment>
             <div className="Kakut">
-                {kakutElements}</div>
+                {kakutElements}</div><br></br><br></br>
             <div className="Kakku">
                 {kakkuElements}
             </div>   

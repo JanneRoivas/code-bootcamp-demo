@@ -1,4 +1,9 @@
+.ProductButton{
+    font: italic bold 15px/30px Georgia, serif;
+}
 
-
-
-
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
