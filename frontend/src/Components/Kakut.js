@@ -38,7 +38,7 @@ export default function Kakut(props) {
     let firstID = kakut.map(kakutData => kakutData.id)
     firstID = firstID[0]
     
-    if (product.kuvaus === undefined) {
+    if (product.kuvaus === undefined && firstID !== undefined) {
         async function fetchData(){
             const res = await fetch(`/api/kakut/${firstID}`)
             res
