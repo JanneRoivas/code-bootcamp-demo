@@ -2,7 +2,6 @@ import React from "react";
 import "./Categories.css";
 import PropTypes from "prop-types"
 
-
 export default function Categories(props) {
    return <div className={`categories ${props.tyyppi}`}>{props.tyyppi}
    </div>

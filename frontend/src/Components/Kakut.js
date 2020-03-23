@@ -4,7 +4,7 @@ import Products from "./Products"
 import Product from "./Product";
 //import Product from "./Product";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button , Div,  UncontrolledAlert,Input } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle, Alert,  UncontrolledAlert,Input } from 'reactstrap';
 
 
 
@@ -78,12 +78,20 @@ export default function Kakut(props) {
         <React.Fragment>
             <div className="Kakut">
                 {kakutElements}</div>
-            <div className="Kakku">
-                {kakkuElements}
-            </div>   
             <div className="Kuva">
-                <img src={require(`../Pictures/kuvaID_${kakkuID}.jpg`)} alt="kakkuKuva"></img>
+                <Card>
+                    <CardBody>
+                        <CardTitle>{product.nimi}</CardTitle>
+                        <CardText>{kakkuElements}</CardText>
+                        <CardImg src={require(`../Pictures/kuvaID_${kakkuID}.jpg`)} alt="kakkuKuva"/>
+                    </CardBody>
+                </Card>
             </div>
         </React.Fragment>
     )
-}
+}           /*
+           <div className="Kakut">
+                {kakutElements}</div>
+            <div className="Kakku">
+                {kakkuElements}
+            </div>   */

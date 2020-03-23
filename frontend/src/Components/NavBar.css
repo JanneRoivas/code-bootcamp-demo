@@ -1,18 +1,11 @@
+
 .nav-bar {
-    background-color: lightgreen;
-    overflow: auto;
-}
-.nav-bar a {
-    color: brown;
+    text-align: center;
     font: italic bold 20px/30px georgia;
 }
-  
-.nav-bar ul {
-    list-style-type: none; 
-    padding: 0;
-    margin: 0;
-}
-.nav-bar li {
-    float: left;
-    margin: 5px 10px;
+
+.nav-baari {
+    text-align: center;
+    
+    font: italic bold 20px/30px georgia;
 }
