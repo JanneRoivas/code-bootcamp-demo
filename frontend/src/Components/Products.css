@@ -2,8 +2,15 @@
     font: italic bold 15px/30px Georgia, serif;
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.productKuva{
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+.productNimi{
+    position: absolute;
+    
+}
+
+
+
