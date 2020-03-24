@@ -1,16 +1,14 @@
-.ProductButton{
-    font: italic bold 15px/30px Georgia, serif;
+.Products {
+    overflow: auto;
+    transition: all 2s ease-out;
+    float: left;
+    padding: 2px 2px;
+    border: 2px solid black;
+    text-align: center;
+  }
+
+.Kuva{
+    height: 30em;
+    width: 60em;
+    position: fixed relative;
 }
-
-.productKuva{
-    position: relative;
-    height: 200px;
-    width: 200px;
-}
-.productNimi{
-    position: absolute;
-    
-}
-
-
-
