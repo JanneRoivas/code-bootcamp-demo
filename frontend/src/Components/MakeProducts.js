@@ -13,7 +13,7 @@ export default function Products(props) {
 
     return (
       <div className={`products ${props.tyyppi}`}>
-        <img src={require(`../Pictures/kuvaID_${props.id}.jpg`)} className="productKuva" onClick={() => props.clickedProduct(props.id)}></img>
+        <img src={require(`../Pictures/kuvaID_${props.id}.jpg`)} className="productKuva"  href ={`./${props.tyyppi}/${props.id}`}></img>
        {props.nimi}
       </div>
     )

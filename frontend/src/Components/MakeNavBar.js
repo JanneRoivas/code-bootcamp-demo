@@ -7,7 +7,7 @@ import {
 export default function MakeNavBar(props) {    
    return <div className={`navBarCategories ${props.tyyppi}`}>
     <NavItem>
-        <NavLink href ={`./${props.tyyppi}`}>{props.tyyppi}</NavLink>
+        <NavLink href ={`../${props.tyyppi}`}>{props.tyyppi}</NavLink>
     </NavItem>
       </div>
 }

@@ -37,7 +37,7 @@ export default function NavBar(props) {
                 {categoryData.tyyppi}
                 </MakeNavBar>
         })
-        
+
     return (
         <div className="nav-bar">
             <Navbar classname="nav-baari" color="dark" dark expand="md">
@@ -51,17 +51,3 @@ export default function NavBar(props) {
         </div>
     );
 } 
-/*
-                <NavItem>
-                    <NavLink href ="./kakut">Kakut</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="./Leivoikset">Leivokset</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="./Pullat">Pullat</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="./Tortut">Tortut</NavLink>
-                </NavItem>
-                */
