@@ -1,7 +1,7 @@
-import React from "react";
 import {Link} from "react-router-dom";
-
+import React, { useState, useEffect, useParams } from "react";
 import "./NavBar.css"
+import MakeNavBar from "./MakeNavBar"
 import {   Collapse,
     Navbar,
     NavbarToggler,
@@ -16,6 +16,28 @@ import {   Collapse,
     NavbarText } from 'reactstrap';
 
 export default function NavBar(props) {
+    const [categories, setcategories] = useState([]);
+    
+    useEffect(() => {
+        async function fetchData(){
+            const res = await fetch('/api/')
+            res
+                .json()
+                .then(data => setcategories(data))
+                .catch(err => console.log("error"))
+        }
+        fetchData()
+    }, [])
+
+    const categoryElements = categories.map(
+        categoryData => {
+            return <MakeNavBar 
+            tyyppi={categoryData.tyyppi}
+            >
+                {categoryData.tyyppi}
+                </MakeNavBar>
+        })
+        
     return (
         <div className="nav-bar">
             <Navbar classname="nav-baari" color="dark" dark expand="md">
@@ -23,7 +45,13 @@ export default function NavBar(props) {
             <NavItem>
               <NavbarBrand href="/">Sannan pulla</NavbarBrand>
             </NavItem>
-      
+            {categoryElements}
+                </Nav>
+                </Navbar>
+        </div>
+    );
+} 
+/*
                 <NavItem>
                     <NavLink href ="./kakut">Kakut</NavLink>
                 </NavItem>
@@ -36,8 +64,4 @@ export default function NavBar(props) {
                 <NavItem>
                     <NavLink href="./Tortut">Tortut</NavLink>
                 </NavItem>
-                </Nav>
-                </Navbar>
-        </div>
-    );
-} 
+                */

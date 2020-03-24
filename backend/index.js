@@ -6,12 +6,17 @@ app.use(bodyParser.json())
 
 const products = require('./products')
 
+app.get('/:tyyppi', (req,res) => products.getProducts(req,res))
+app.get('/:tyyppi/:id', (req,res) => products.getProduct(req,res))
+app.get('/', (req,res) => products.getCategories(req,res))
+
+/*
 app.get('/kakut',(req,res) => products.getKakut(req,res))  
 app.get('/leivokset',(req,res) => products.getLeivokset(req,res))
 app.get('/pullat',(req,res) => products.getPullat(req,res))
 app.get('/tortut',(req,res) => products.getTortut(req,res))
 app.get('/kakut/:id',(req,res) => products.getProduct(req,res))   
-
+*/
 /*
 app.post('/fruits',(req,res) => fruits.addFruit(req,res))
 app.delete('/fruits/:id',(req,res) => fruits.deleteFruit(req,res))

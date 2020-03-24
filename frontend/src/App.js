@@ -1,14 +1,11 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, useParams} from 'react-router-dom';
 
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
-import Kakut from './Components/Kakut';/*
-import Leivokset from './Components/Leivokset';
-import Pullat from './Components/Pullat';
-import Tortut from './Components/Tortut';*/
-
+import Products from './Components/Products';
 import './App.css';
+
 
 
 function App() {
@@ -17,7 +14,7 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/kakut"><Kakut/></Route>
+        <Route path="/:tyyppi" component={Products} />
         <Route render={() => "404 - Not Found!"}/>
       </Switch>
     </Router>
