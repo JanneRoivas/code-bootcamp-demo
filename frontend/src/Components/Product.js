@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useParams } from "react";
-//import "./Product.css";
+import "./Product.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, CardImg, CardText, CardBody,CardTitle} from 'reactstrap';
 
@@ -27,11 +27,11 @@ export default function Products({match} = match,props) {
     return (
         <React.Fragment>
             <div className="Kuva">
-                <Card>
+                <Card style={{ borderColor: '#333', backgroundColor: '#343a40', width:'40em'}}>
                     <CardBody>
-                        <CardTitle>{product.nimi}</CardTitle>
-                        <CardText>{productElements}</CardText>
-                        <CardImg src={require(`../Pictures/kuvaID_${id}.jpg`)} alt="ProductKuva"/>
+                        <CardImg top width="100%"  src={require(`../Pictures/kuvaID_${id}.jpg`)} alt="ProductKuva" className="ProductKuva"/>
+                        <CardTitle style={{color:'white'}}>{product.nimi}</CardTitle>
+                        <CardText style={{color:'rgba(255,255,255,.5'}}>{productElements}</CardText>
                     </CardBody>
                 </Card>
             </div>

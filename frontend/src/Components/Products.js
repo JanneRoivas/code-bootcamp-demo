@@ -3,7 +3,7 @@ import "./Products.css";
 import MakeProducts from "./MakeProducts"
 import MakeNavbar from "./MakeNavBar"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card, CardImg, CardText, CardBody,CardTitle} from 'reactstrap';
+import { Card, CardImg, CardText,CardGroup, CardBody,CardTitle} from 'reactstrap';
 
 
 
@@ -41,8 +41,11 @@ export default function Products({match} = match,props) {
 
     return (
         <React.Fragment>
-            <div className="Products">
-                {productsElements}</div>
+            <div className="ProductCard">
+            <CardGroup>
+                {productsElements}
+            </CardGroup>
+            </div>
         </React.Fragment>
     )
 }          
