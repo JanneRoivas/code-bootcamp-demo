@@ -6,6 +6,7 @@ import Home from './Components/Home'
 import Products from './Components/Products'
 import Product from './Components/Product'
 import './App.css'
+import Yhteystiedot from './Components/Yhteystiedot'
 
 
 
@@ -16,6 +17,7 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path="/" component={Home}/>
+        <Route exact path="/Yhteystiedot" component={Yhteystiedot}/>
         <Route exact path="/:tyyppi" component={Products} />
         <Route exact path="/:tyyppi/:id" component={Product} />
         <Route render={() => "404 - Not Found!"}/>

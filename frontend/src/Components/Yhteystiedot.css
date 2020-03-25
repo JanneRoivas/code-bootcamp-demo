@@ -1,0 +1,16 @@
+.Yhteystietosivu{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.Yhteystiedot{
+    padding: 5px;
+    width: 50%;
+}
+.Palautelomake{
+    padding: 5px;
+    width: 50%;
+}

@@ -2,24 +2,18 @@ const express = require('express')
 const app = express()
 const port = 4000
 const bodyParser = require('body-parser')
-app.use(bodyParser.json())
-
+const nodemailer = require("nodemailer");
 const products = require('./products')
+
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+    extended: false
+ }))
+
 
 app.get('/:tyyppi', (req,res) => products.getProducts(req,res))
 app.get('/:tyyppi/:id', (req,res) => products.getProduct(req,res))
 app.get('/', (req,res) => products.getCategories(req,res))
-
-/*
-app.get('/kakut',(req,res) => products.getKakut(req,res))  
-app.get('/leivokset',(req,res) => products.getLeivokset(req,res))
-app.get('/pullat',(req,res) => products.getPullat(req,res))
-app.get('/tortut',(req,res) => products.getTortut(req,res))
-app.get('/kakut/:id',(req,res) => products.getProduct(req,res))   
-*/
-/*
-app.post('/fruits',(req,res) => fruits.addFruit(req,res))
-app.delete('/fruits/:id',(req,res) => fruits.deleteFruit(req,res))
-*/
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

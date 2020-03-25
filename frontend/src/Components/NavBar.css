@@ -2,6 +2,7 @@
 .nav-bar {
     text-align: center;
     font: italic bold 20px/30px georgia;
+    overflow: auto;
 }
 
 .nav-baari {

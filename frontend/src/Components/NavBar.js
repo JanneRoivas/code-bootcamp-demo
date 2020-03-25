@@ -6,6 +6,7 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
+    NavLink
  } from 'reactstrap';
 
 export default function NavBar(props) {
@@ -34,13 +35,16 @@ export default function NavBar(props) {
     return (
         <div className="nav-bar">
             <Navbar classname="nav-baari" color="dark" dark expand="md">
-            <Nav className="nav-baari" navbar>
-            <NavItem>
-              <NavbarBrand href="/">Sannan pulla</NavbarBrand>
-            </NavItem>
-            {categoryElements}
+                <Nav className="nav-baari" navbar>
+                    <NavItem>
+                        <NavbarBrand href="/">Sannan pulla</NavbarBrand>
+                    </NavItem>
+                    {categoryElements}
+                    <NavItem>
+                        <NavLink href="/Yhteystiedot">Yhteystiedot</NavLink>
+                    </NavItem>                   
                 </Nav>
-                </Navbar>
+            </Navbar>
         </div>
     );
 } 
