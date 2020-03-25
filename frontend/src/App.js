@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Switch, Route, useParams} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 import NavBar from './Components/NavBar'
 import Home from './Components/Home'
@@ -9,9 +9,10 @@ import './App.css'
 
 
 
+
 function App() {
   return (
-    <Router>
+    <Router >
       <NavBar/>
       <Switch>
         <Route exact path="/" component={Home}/>
@@ -22,5 +23,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

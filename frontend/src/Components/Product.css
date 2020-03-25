@@ -1,5 +1,6 @@
-.productKuva{
-  text-align: center;
+.ProductKuva{
+  width: 75%;
+  height: 75%;
 }
 
 .products{
@@ -8,11 +9,31 @@
   font-weight: 900;
   font: italic bold 20px/30px georgia;
   font: bolder;
-  transition: all 2s ease-out;
+  transition: all 5s ease-out;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin: auto;
+  padding: 25px 25px
 }
 
-.Kuva{
+.ProductText{
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  font: Impact;
+}
+
+.Product{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
   font: italic bold 20px/30px georgia;
+  font: bolder;
+  transition: all 5s ease-out;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin: auto;
+  padding: 25px 25px;
 }
 
 .products :hover {

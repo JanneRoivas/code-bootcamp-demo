@@ -1,19 +1,12 @@
-import {Link} from "react-router-dom";
-import React, { useState, useEffect, useParams } from "react";
+import React, { useState, useEffect } from "react";
 import "./NavBar.css"
 import MakeNavBar from "./MakeNavBar"
-import {   Collapse,
+import {
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText } from 'reactstrap';
+ } from 'reactstrap';
 
 export default function NavBar(props) {
     const [categories, setcategories] = useState([]);

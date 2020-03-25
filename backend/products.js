@@ -14,7 +14,7 @@ const getProducts = (req,res) => {
     }
 const getProduct = (req,res) => {
     const id = req.params.id
-    db.one("SELECT id,nimi,kuvaus FROM bakedGoods WHERE id=$1", [id])
+    db.one("SELECT id,nimi,kuvaus,ainesosat FROM bakedGoods WHERE id=$1", [id])
     .then((ProductDescFromDb) =>res.send(ProductDescFromDb))
     .catch(error => res.status(500).send(error))
 }

@@ -1,9 +1,6 @@
-import React, { useState, useEffect, useParams } from "react";
-import "./Products.css";
+import React, { useState, useEffect } from "react";
 import MakeProducts from "./MakeProducts"
-import MakeNavbar from "./MakeNavBar"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card, CardImg, CardText,CardGroup, CardBody,CardTitle} from 'reactstrap';
+import {CardGroup} from 'reactstrap';
 
 
 
@@ -41,7 +38,7 @@ export default function Products({match} = match,props) {
 
     return (
         <React.Fragment>
-            <div className="ProductCard">
+            <div className="ProductCards">
             <CardGroup>
                 {productsElements}
             </CardGroup>
