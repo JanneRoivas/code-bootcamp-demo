@@ -17,7 +17,7 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/Yhteystiedot" component={Yhteystiedot}/>
+        <Route path="/Yhteystiedot" component={Yhteystiedot}/>
         <Route exact path="/:tyyppi" component={Products} />
         <Route exact path="/:tyyppi/:id" component={Product} />
         <Route render={() => "404 - Not Found!"}/>
