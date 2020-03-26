@@ -4,7 +4,7 @@ const db = pgp({
     port: 5432,
     database: 'demo',
     user: 'postgres',
-    password: 'jtihh6kd'
+    password: 'postgres'
 })
 const getProducts = (req,res) => {
     const tyyppi = req.params.tyyppi
