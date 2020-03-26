@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import MakeProducts from "./MakeProducts"
+<<<<<<< HEAD
 import {CardGroup} from 'reactstrap';
+=======
+import MakeNavbar from "./MakeNavBar"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card, CardImg, CardText,CardGroup, CardBody,CardTitle} from 'reactstrap';
+>>>>>>> Lisätty reactstrap elementtejä
 
 
 
@@ -38,11 +44,23 @@ export default function Products({match} = match,props) {
 
     return (
         <React.Fragment>
+<<<<<<< HEAD
+<<<<<<< HEAD
             <div className="ProductCards">
+=======
+            <div className="ProductCard">
+>>>>>>> Lisätty reactstrap elementtejä
             <CardGroup>
                 {productsElements}
             </CardGroup>
             </div>
+<<<<<<< HEAD
+=======
+            <div className="Products">
+                {productsElements}</div>
+>>>>>>> Muutettu vielä toimimaan erillisinä elementteinä/sivuina tuotteet ja tuote
+=======
+>>>>>>> Lisätty reactstrap elementtejä
         </React.Fragment>
     )
 }          

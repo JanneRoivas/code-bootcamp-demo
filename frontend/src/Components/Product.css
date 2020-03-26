@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 .ProductKuva{
   width: 75%;
   height: 75%;
@@ -38,4 +41,43 @@
 
 .products :hover {
   font-size:105%;
+=======
+.Products{
+=======
+.kuva{
+>>>>>>> Muutettu vielä toimimaan erillisinä elementteinä/sivuina tuotteet ja tuote
+  font: italic bold 15px/30px Georgia, serif;
 }
+/*
+.productKuva{
+  position: relative;
+  height: 200px;
+  width: 200px;
+<<<<<<< HEAD
+>>>>>>> Lisätty dumppi tietokannasta
+}
+=======
+}*/
+>>>>>>> Muutettu vielä toimimaan erillisinä elementteinä/sivuina tuotteet ja tuote
+=======
+.productKuva{
+  text-align: center;
+}
+
+.products{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+  font: italic bold 20px/30px georgia;
+  font: bolder;
+  transition: all 2s ease-out;
+}
+
+.Kuva{
+  font: italic bold 20px/30px georgia;
+}
+
+.products :hover {
+  font-size:105%;
+}
+>>>>>>> Lisätty reactstrap elementtejä
