@@ -1,0 +1,20 @@
+.Home{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    font: comic;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.HomePicture{
+    position: relative;
+    opacity: .8;
+    width: 50%;
+}
+.HomeText{
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
