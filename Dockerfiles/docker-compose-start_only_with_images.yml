@@ -1,18 +1,18 @@
 version: '3'
 services:
   postgresql:
-    build: ./postgresql
+    image: postgresql:latest
     expose: 
       - 5432
     network_mode: "host"
   react:
-    build: ./react
+    image: react:latest
     ports:
       - '3000:3000'
     restart: on-failure
     network_mode: "host"
   nodejs:
-    build: ./nodejs
+    image: nodejs:latest
     ports:
       - '4000:4000'
     restart: on-failure
