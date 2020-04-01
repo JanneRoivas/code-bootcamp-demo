@@ -1,0 +1,16 @@
+.products{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+    font: italic bold 20px/30px georgia;
+    font: bolder;
+    transition: all 5s ease-out;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin: auto;
+    padding: 25px 25px
+  }
+
+.products :hover {
+font-size:105%;
+}

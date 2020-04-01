@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
 import MakeProducts from "./MakeProducts"
-import {CardGroup} from 'reactstrap';
-
+import {CardGroup} from 'reactstrap'
+import "./Products.css";
 
 
 export default function Products({match} = match,props) {

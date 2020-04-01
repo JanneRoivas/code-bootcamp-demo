@@ -1,41 +1,45 @@
-.ProductKuva{
-  width: 75%;
-  height: 75%;
-}
-
-.products{
-  text-align: center;
-  font-size: 25px;
-  font-weight: 900;
-  font: italic bold 20px/30px georgia;
-  font: bolder;
-  transition: all 5s ease-out;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin: auto;
-  padding: 25px 25px
-}
-
-.ProductText{
-  text-align: center;
-  font-size: 15px;
-  font-weight: 500;
-  font: Impact;
-}
-
 .Product{
+  display: flex;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+
+}
+.KuvaPuoli{
+  padding: 5px;
+  width: 60%;
+}
+.TekstiPuoli{
+  padding: 15px;
+  width: 30%;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 300;
   font: italic bold 20px/30px georgia;
   font: bolder;
-  transition: all 5s ease-out;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin: auto;
-  padding: 25px 25px;
+  font-style: oblique;
+  margin-left: 2.5em;
+}
+.ProductKuva{
+  width: 80%;
+  height: 80%;
+  border: 2px solid black;
+}
+.Nimi{
+  color: #343a40;
+  font-weight: 900;
+}
+.Kuvaus{
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+}
+.Ainesosat{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: rgba(47, 49, 52, 0.547);
+  line-height: 1.25em;
 }
 
-.products :hover {
-  font-size:105%;
-}

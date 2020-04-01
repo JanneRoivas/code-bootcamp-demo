@@ -1,4 +1,4 @@
 module.exports = {
-    USER: 'vihtorikallevihtori@gmail.com', 
-    PASS: 'jtihh6kd'
+    USER: 'jannen.code.bootcamp.demo@gmail.com', 
+    PASS: 'QwErTy1234'
 }
