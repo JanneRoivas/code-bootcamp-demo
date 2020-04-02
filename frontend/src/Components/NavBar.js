@@ -23,19 +23,19 @@ export default function NavBar(props) {
         fetchData()
     }, [])
 
-
-
-   
-    const categoryElements = (categories || []).map(
+    let categoryElements
+    try {
+    categoryElements = (categories || []).map(
         categoryData => {
             return <MakeNavBar 
             tyyppi={categoryData.tyyppi}
             >
             {categoryData.tyyppi}
             </MakeNavBar>
-        })        
+        })
+    } catch {categoryElements = [] && alert("Virhe ladatessa tietokannasta")}        
 
-    return (
+    return ( 
         <div className="nav-bar">
             <Navbar classname="nav-baari" color="dark" dark expand="md">
                 <Nav className="nav-baari" navbar>
@@ -49,5 +49,5 @@ export default function NavBar(props) {
                 </Nav>
             </Navbar>
         </div>
-    );
+    )
 } 
