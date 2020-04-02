@@ -7,7 +7,7 @@ import Products from './Components/Products'
 import Product from './Components/Product'
 import './App.css'
 import Yhteystiedot from './Components/Yhteystiedot'
-
+import Login from './Components/Login'
 
 
 
@@ -18,6 +18,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/Yhteystiedot" component={Yhteystiedot}/>
+        <Route path="/Login" component={Login}/>
         <Route exact path="/:tyyppi" component={Products} />
         <Route exact path="/:tyyppi/:id" component={Product} />
         <Route render={() => "404 - Not Found!"}/>

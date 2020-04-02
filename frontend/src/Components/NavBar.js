@@ -37,7 +37,7 @@ export default function NavBar(props) {
 
     return ( 
         <div className="nav-bar">
-            <Navbar classname="nav-baari" color="dark" dark expand="md">
+            <Navbar className="nav-baari" color="dark" dark expand="md">
                 <Nav className="nav-baari" navbar>
                     <NavItem>
                         <NavbarBrand href="/">Sannan pulla</NavbarBrand>
@@ -45,8 +45,9 @@ export default function NavBar(props) {
                     {categoryElements}
                     <NavItem>
                         <NavLink href="/Yhteystiedot">Yhteystiedot</NavLink>
-                    </NavItem>                   
-                </Nav>
+                    </NavItem>      
+                </Nav>          
+                <NavLink style={{position:"absolute", right:"0%"}} href="/Login">Login</NavLink>
             </Navbar>
         </div>
     )
