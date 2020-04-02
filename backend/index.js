@@ -19,8 +19,4 @@ app.get('/', (req,res) => products.getCategories(req,res))
 app.use(cors())
 app.post('/Yhteystiedot/', (req, res, next) => feedBack.sendFeedBack(req,res,next))
 
-
-
-
-
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

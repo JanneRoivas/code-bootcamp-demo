@@ -18,19 +18,22 @@ export default function NavBar(props) {
             res
                 .json()
                 .then(data => setcategories(data))
-                .catch(err => console.log("error"))
+                .catch(err => alert("Yhteysvirhe ladatessa tietokannasta"))
         }
         fetchData()
     }, [])
 
-    const categoryElements = categories.map(
+
+
+   
+    const categoryElements = (categories || []).map(
         categoryData => {
             return <MakeNavBar 
             tyyppi={categoryData.tyyppi}
             >
-                {categoryData.tyyppi}
-                </MakeNavBar>
-        })
+            {categoryData.tyyppi}
+            </MakeNavBar>
+        })        
 
     return (
         <div className="nav-bar">
