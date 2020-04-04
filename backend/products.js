@@ -24,8 +24,23 @@ const getCategories = (req,res) => {
     .catch(error => res.status(500).send(error))
 }
 
+const checkLogin = (req,res) => {
+    const username = req.body.username
+    const password = req.body.password
+    let code = 0
+    db.one("SELECT * FROM users WHERE username=$1 AND password=$2", [username,password])
+    .then(apu => res.status(200).send(true))
+    .catch(error => res.status(500).send(error))
+}
+
    module.exports = {
         getProducts,
         getProduct,
-        getCategories
+        getCategories,
+        checkLogin
     }
+
+/* Paskaversio mut toimii
+    .then(apu => res.status(200).send(true))
+    .catch(error => res.status(500).send(error))
+*/
