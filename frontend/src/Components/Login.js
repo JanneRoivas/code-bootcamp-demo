@@ -4,6 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import React from 'react';
 import axios from 'axios';
+import { useCookies } from 'react-cookie';
 
 
 export default class Login extends React.Component {
@@ -15,9 +16,10 @@ export default class Login extends React.Component {
           }
       }
 
+
+
+
  handleClick(event){
-    let apiBaseUrl = "http://localhost:4000/api/";
-    let self = this;
     let payload={
         "username":this.state.username,
         "password":this.state.password
@@ -27,16 +29,21 @@ export default class Login extends React.Component {
     .then(function (response) {
       /*console.log(response);*/
     if(response !== "true"){
+        sessionStorage.setItem('isAuthenticated', true)
         alert("Sisäänkirjautuminen onnistui!"); 
+        window.location.assign('./Logged')
     }
     })
     .catch(function (error) {
     alert("Käyttäjätunnus ja salasana eivät täsmää.");
+    //sessionStorage.setItem('isAuthenticated',false)
     });
     }
+    
 
 
 render() {
+  
     return (
         <React-fragment>
         <div>
