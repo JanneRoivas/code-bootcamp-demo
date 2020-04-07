@@ -1,0 +1,23 @@
+version: "3.4"
+services:
+  react:
+    image: docker.pkg.github.com/janneroivas/code-bootcamp-demo/react:latest
+    ports:
+      - 80:80
+    depends_on:
+      - nodejs
+  nodejs:
+    image: docker.pkg.github.com/janneroivas/code-bootcamp-demo/nodejs:latest
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=demo
+    depends_on:
+      - postgres
+  postgres:
+    image: docker.pkg.github.com/janneroivas/code-bootcamp-demo/postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+     
