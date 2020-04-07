@@ -23,7 +23,7 @@ jobs:
         run: docker build ./backend --tag nodejs
 
       - name: Build react image
-        run: docker build ./frontend --tag react 
+        run: docker build ./frontend --tag react
 
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
@@ -37,7 +37,7 @@ jobs:
           VERSION=latest
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
-          docker tag db $IMAGE_ID:$VERSION
+          docker tag postgres $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
           
       - name: Push nodejs image
@@ -49,7 +49,7 @@ jobs:
           VERSION=latest
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
-          docker tag backend $IMAGE_ID:$VERSION
+          docker tag nodejs $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
           
       - name: Push react image
