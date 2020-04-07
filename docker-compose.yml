@@ -1,0 +1,27 @@
+version: '3.4'
+services:
+  react:
+    build: ./frontend
+    ports:
+      - 80:80
+    depends_on:
+      - nodejs
+    volumes: 
+      - ./frontend/production_nginx_default.conf:/etc/nginx/conf.d/default.conf
+  nodejs:
+    build: ./backend
+    environment:
+      - POSTGRES_HOST
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+    volumes:
+      - ./backend:/usr/src/app
+    ports:
+      - 4000:4000
+    depends_on:
+      - postgresql
+  postgresql:
+    build: ./database
+    ports:
+      - 5433:5432
