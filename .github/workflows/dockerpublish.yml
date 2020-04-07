@@ -27,7 +27,19 @@ jobs:
 
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-    
+
+      - name: Push postgres image
+        run: |
+          IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/postgres
+          
+          # Change all uppercase to lowercase
+          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+          VERSION=latest
+          echo IMAGE_ID=$IMAGE_ID
+          echo VERSION=$VERSION
+          docker tag postgres $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
+          
       - name: Push nodejs image
         run: |
           IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/nodejs
