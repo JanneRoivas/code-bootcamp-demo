@@ -16,10 +16,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build nodejs image
-        run: docker build ./backend --tag nodejs_image
+        run: docker build ./backend --tag nodejs
 
       - name: Build postgres image
-        run: docker build ./database --tag postgres_image
+        run: docker build ./database --tag postgres
 
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
