@@ -1,0 +1,67 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Docker
+
+on:
+  push:
+    # Publish `master` as Docker `latest` image.
+    branches:
+      - master
+
+jobs:
+  # Push image to GitHub Packages.
+  # See also https://docs.docker.com/docker-hub/builds/
+  push:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build postgres image
+        run: docker build ./database --tag postgres
+
+      - name: Build nodejs image
+        run: docker build ./backend --tag nodejs
+
+      - name: Build react image
+        run: docker build ./frontend --tag react
+
+      - name: Log into registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+
+      - name: Push postgres image
+        run: |
+          IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/postgres
+          
+          # Change all uppercase to lowercase
+          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+          VERSION=latest
+          echo IMAGE_ID=$IMAGE_ID
+          echo VERSION=$VERSION
+          docker tag db $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
+          
+      - name: Push nodejs image
+        run: |
+          IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/nodejs
+          
+          # Change all uppercase to lowercase
+          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+          VERSION=latest
+          echo IMAGE_ID=$IMAGE_ID
+          echo VERSION=$VERSION
+          docker tag backend $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
+          
+      - name: Push react image
+        run: |
+          IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/react
+          
+          # Change all uppercase to lowercase
+          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+          VERSION=latest
+          echo IMAGE_ID=$IMAGE_ID
+          echo VERSION=$VERSION
+          docker tag frontend $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
