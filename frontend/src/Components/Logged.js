@@ -1,12 +1,12 @@
 import React from 'react';
-//import "./Logged.css";
+import "./Logged.css";
 
 export default function(props) {
 
     function logOut() {
-        sessionStorage.setItem('isAuthenticated', false)
+        sessionStorage.removeItem('isAuthenticated')
         alert("Olet kirjautunut ulos."); 
-        window.location.assign('./Home')
+        window.location.assign('./')
 
     }
 

@@ -1,11 +1,10 @@
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import React from 'react';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
-
+import "./Login.css";
 
 export default class Login extends React.Component {
     constructor(props) {
@@ -46,10 +45,11 @@ render() {
   
     return (
         <React-fragment>
-        <div>
+        <div className="LoginPage">
           <MuiThemeProvider >
             <div>
-             <TextField
+           <h1 className="Title">Login</h1>
+             <TextField 
                hintText="Enter your Username"
                floatingLabelText="Username"
                onChange = {(event,newValue) => this.setState({username:newValue})}
