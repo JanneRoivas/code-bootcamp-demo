@@ -9,6 +9,9 @@
 .Yhteystiedot{
     padding: 5px;
     width: 50%;
+    font: italic bold 15px/30px georgia;
+    color: #343a40;
+    font-weight: 900;
 }
 .Palautelomake{
     padding: 15px;

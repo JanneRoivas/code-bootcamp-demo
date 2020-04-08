@@ -1,9 +1,25 @@
 .LoginPage{
     margin: auto;
     text-align: center;
+    width: 25%;
+    border: 2px solid black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: white
 }
 
 .Title{
     color: #007bff;
+    text-align: center;
+    font: italic bold 30px/40px georgia;
+    overflow: auto;
+    border: 2px solid black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: none;
+    width: 25%;
+    margin: auto;
+    margin-top: 7%;
+    background-color:  #343a40;
 }
 

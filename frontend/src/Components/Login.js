@@ -45,24 +45,27 @@ render() {
   
     return (
         <React-fragment>
+           <h1 className="Title">Kirjaudu sisään</h1>
         <div className="LoginPage">
+     
           <MuiThemeProvider >
-            <div>
-           <h1 className="Title">Login</h1>
-             <TextField 
-               hintText="Enter your Username"
-               floatingLabelText="Username"
+            <div className>
+           
+             <TextField
+               hintText="Kirjoita käyttäjätunnuksesi" 
+               floatingLabelText="Käyttäjätunnus" 
                onChange = {(event,newValue) => this.setState({username:newValue})}
                />
              <br/>
                <TextField
                  type="password"
-                 hintText="Enter your Password"
-                 floatingLabelText="Password"
+                 hintText="Kirjoita salasanasi"
+                 floatingLabelText="Salasana"
                  onChange = {(event,newValue) => this.setState({password:newValue})}
                  />
-               <br/>
-               <RaisedButton label="Submit" primary={true} onClick={(event) => this.handleClick(event)}/>
+               <br/> <br></br>
+               <RaisedButton label="Lähetä" primary={true}  onClick={(event) => this.handleClick(event)}/>
+              <br/><br></br>
            </div>
            </MuiThemeProvider>
         </div>
