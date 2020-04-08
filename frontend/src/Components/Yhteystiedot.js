@@ -71,7 +71,7 @@ export default class Yhteystiedot extends React.Component {
                         <Label for="exampleText">Palaute</Label>
                         <Input style={{height:'160px'}} type="textarea" name="message" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
                     </FormGroup>
-                    <Button>Submit</Button>
+                    <Button>Lähetä</Button>
                 </Form>
                 </section>
             </div>

@@ -8,4 +8,4 @@ ${BROWSER}      %{BROWSER}
 Test Getting Kakku
     Open Browser    http://react/Kakku
     Select From List By Value   name:tyyppi   Kakut
-    Element Should Contain  name:nimi     Juustokakku
+    Element Should Contain      name:nimi     Juustokakku

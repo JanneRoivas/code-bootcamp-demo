@@ -8,7 +8,7 @@ ${BROWSER}      %{BROWSER}
 Test Home Page Title
     Open Browser    http://react
     ${title}=       Get Title
-    Should Be Equal     Sample Codes    ${title}
+    Should Be Equal     Sannan pulla    ${title}
 
 Test Home Page Greeting
     Open Browser    http://react
