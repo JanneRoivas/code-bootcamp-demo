@@ -21,7 +21,6 @@ export default function Products({match} = match,props) {
         }
         fetchData()
     },[])
-
     
 
     return (
@@ -39,11 +38,3 @@ export default function Products({match} = match,props) {
         </React.Fragment>
     )
 }          
-/* <Card style={{ margin:'auto', borderColor: '#333', backgroundColor: '#343a40', width:'40em'}}>
-                    <CardBody>
-                        <CardImg src={require(`../Pictures/kuvaID_${id}.jpg`)} alt="ProductKuva" className="ProductKuva"/>
-                        <CardTitle style={{color:'white'}}>{product.nimi}</CardTitle>
-                        <CardSubtitle style={{color:'rgba(255,255,255,.5'}}>{product.kuvaus}</CardSubtitle>
-                        <CardText style={{color:'rgba(255,255,255,1'}} className="ProductText">Ainesosat: {product.ainesosat}</CardText>
-                    </CardBody>
-                </Card>*/

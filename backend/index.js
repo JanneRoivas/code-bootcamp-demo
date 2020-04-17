@@ -13,6 +13,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
  }))
+
 app.get('/:tyyppi', (req,res) => products.getProducts(req,res))
 app.get('/:tyyppi/:id', (req,res) => products.getProduct(req,res))
 app.get('/', (req,res) => products.getCategories(req,res))
